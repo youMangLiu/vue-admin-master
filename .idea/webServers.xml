@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="44b2d268-81da-44a6-9dab-f3f400bc207f" name="dsmj-web" url="http://101.132.172.166">
+        <fileTransfer host="101.132.172.166" port="22" rootFolder="/var/www/dsmj-web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
