@@ -43,15 +43,13 @@
             };
         },
         methods: {
-            handleReset2() {
-                this.$refs.ruleForm2.resetFields();
-            },
             handleSubmit2() {
                 this.$refs.ruleForm2.validate((valid) => {
                     if (valid) {
-                        this.logining = true;
+                        this.logining = false;
                         let loginParams = {username: this.ruleForm2.account, password: this.ruleForm2.checkPass};
                         requestLogin(loginParams).then(data => {
+                            console.log(data);
                             this.logining = false;
                             let {msg, code, token} = data;
                             if (code !== 'SUCCESS') {
@@ -61,6 +59,7 @@
                                     type: 'error'
                                 });
                             } else {
+                                this.logining = false;
                                 localStorage.setItem('token', token);
                                 axios.defaults.headers.common['Authorization'] = token;
                                 this.$router.push({path: '/table'});
