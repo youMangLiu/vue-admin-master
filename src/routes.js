@@ -1,14 +1,14 @@
-import Login from './views/Login.vue'
-import NotFound from './views/404.vue'
-import Home from './views/Home.vue'
-import Table from './views/userInfo/Table.vue'
-import Form from './views/userInfo/Form.vue'
-import User from './views/userInfo/user.vue'
-import Room from './views/roomManage/Room.vue'
-import Page5 from './views/roomManage/Page5.vue'
-import Reg from './views/config/Reg.vue'
-import Sign from './views/config/Sign.vue'
-import echarts from './views/charts/echarts.vue'
+const Login = resolve => require(['./views/Login.vue'], resolve);
+const NotFound = resolve => require(['./views/404.vue'], resolve);
+const Home = resolve => require(['./views/Home.vue'], resolve);
+const Table = resolve => require(['./views/userInfo/Table.vue'], resolve);
+const Form = resolve => require(['./views/userInfo/Form.vue'], resolve);
+const User = resolve => require(['./views/userInfo/user.vue'], resolve);
+const Room = resolve => require(['./views/roomManage/Room.vue'], resolve);
+const Page5 = resolve => require(['./views/roomManage/Page5.vue'], resolve);
+const Reg = resolve => require(['./views/config/Reg.vue'], resolve);
+const Sign = resolve => require(['./views/config/Sign.vue'], resolve);
+const echarts = resolve => require(['./views/charts/echarts.vue'], resolve);
 
 let routes = [
     {
@@ -23,7 +23,6 @@ let routes = [
         name: '',
         hidden: true
     },
-    //{ path: '/main', component: Main },
     {
         path: '/',
         component: Home,
